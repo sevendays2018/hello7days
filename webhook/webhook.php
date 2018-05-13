@@ -6,7 +6,7 @@
 function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
         sendMessage("source" => $update["result"]["source"],
-            "speech" => $update,
+            "speech" => "TESTED",
             "displayText" => "HELLO",
             "contextOut" => array());
     }
