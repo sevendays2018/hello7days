@@ -5,10 +5,7 @@
 // Recieve INPUT Data //
 function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
-        $userDataGET = json_encode($update["originalRequest"]["data"]["data"]["source"]["userId"]);
-        $userDataGET = strstr($userDataGET,'userId');
-        $userDataGET = substr($userDataGET,8,strpos($userDataGET,'"},"type":"message","message":'));
-        $userDataGET = substr($userDataGET,1,-30);
+        $userDataGET = json_encode($update["source"]["userId"]);
         
         $url = 'https://api.line.me/v2/bot/profile/'.$userDataGET;
 $headers = array('Authorization: Bearer Lxqz2e+YBidafMeoIgAYTbcFEJtAaf0EJ9E715p1bU4d6UKk5M8dJ9lvkiMdagnmpkdt+uqdgDERWYJzh2XARz1wZStu4jCWotCDdJ4p1/9TORp6trSz7g1jsoNmB1kmGqdmWGLJ012QWauIs4NckQdB04t89/1O/w1cDnyilFU=');
