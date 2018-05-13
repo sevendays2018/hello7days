@@ -9,8 +9,8 @@ function processMessage($update) {
             }*/
             
            array(
- //"speech" => "TESTED",
-  "speech" => array(
+ "speech" => "TESTED",
+  "message" => [ array(
     "type" => 4,
       "platform" => "line",
       "payload" => array(
@@ -20,7 +20,7 @@ function processMessage($update) {
     "previewImageUrl" => "https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg"
     )
   )
-  )
+  )]
 )
             
             /*array(
