@@ -5,12 +5,15 @@
 // Recieve INPUT Data //
 function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
-        sendMessage(000);
+        sendMessage("source" => $update["result"]["source"],
+            "speech" => $update,
+            "displayText" => "HELLO",
+            "contextOut" => array());
     }
 }
 function sendMessage($parameters) {
     //$finale = json_decode($parameters);
-    echo json_encode($update);
+    echo json_encode($parameters);
 }
 $update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);
