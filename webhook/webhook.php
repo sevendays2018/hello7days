@@ -16,6 +16,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 $result = curl_exec($ch);
 curl_close($ch);
+$finale = json_decode($result, true);
         
         sendMessage(
             
@@ -25,7 +26,7 @@ curl_close($ch);
       "payload" => array(
           "line" => array(
           "type" => "text",
-          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$result['displayName']." แร้วจะหาว่าไม่เตือน!"
+          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$finale['displayName']." แร้วจะหาว่าไม่เตือน!"
 ))
   )]
 )
