@@ -24,7 +24,7 @@ function processMessage($update) {
 }
 sendMessage(
            array(
-            "source" => $update["result"]["source"],
+            //"source" => $update["result"]["source"],
             "speech" => "{
   \"line\": {
     \"type\": \"image\",
