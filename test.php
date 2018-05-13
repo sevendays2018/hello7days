@@ -7,7 +7,7 @@ $iamwho = array(
             "displayText" => "Hello from webhook",
             "contextOut" => array()
         );
- echo json_encode($iamwho);
+ echo $update_response;
 /*function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
         sendMessage(array(
