@@ -5,8 +5,19 @@
 // Recieve INPUT Data //
 function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
-        $userdata = json_encode($update["originalRequest"]["data"]["data"]["source"]["userId"]);
-        $userdata = substr($userdata,1,-1);
+        $userDataGET = json_encode($update["originalRequest"]["data"]["data"]["source"]["userId"]);
+        $userDataGET = substr($userDataGET,1,-1);
+        
+        $url = 'https://api.line.me/v2/bot/profile/'.$userDataGET;
+$headers = array('Authorization: Bearer Lxqz2e+YBidafMeoIgAYTbcFEJtAaf0EJ9E715p1bU4d6UKk5M8dJ9lvkiMdagnmpkdt+uqdgDERWYJzh2XARz1wZStu4jCWotCDdJ4p1/9TORp6trSz7g1jsoNmB1kmGqdmWGLJ012QWauIs4NckQdB04t89/1O/w1cDnyilFU=');
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+$result = curl_exec($ch);
+curl_close($ch);
+$finale = json_decode($result, true);
+        
         sendMessage(
             
            array(
@@ -15,7 +26,7 @@ function processMessage($update) {
       "payload" => array(
           "line" => array(
           "type" => "text",
-          "text" => $userdata
+          "text" => "Hello ".$finale['displayName']
 ))
   )]
 )
