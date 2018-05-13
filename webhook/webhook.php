@@ -5,6 +5,8 @@
 // Recieve INPUT Data //
 function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
+        $userDataGET = json_encode($update["originalRequest"]["data"]["data"]["source"]["userId"]);
+        $userDataGET = ltrim($userDataGET,'"');
         sendMessage(
             
            array(
@@ -13,7 +15,7 @@ function processMessage($update) {
       "payload" => array(
           "line" => array(
           "type" => "text",
-          "text" => json_encode($update["originalRequest"]["data"]["data"]["source"]["userId"])
+          "text" => $userDataGET
 ))
   )]
 )
