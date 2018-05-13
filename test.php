@@ -1,5 +1,12 @@
 <?php
-function processMessage($update) {
+$iamwho = array(
+            "line": {
+    "type": "text",
+    "text": "tested"
+  }
+        );
+ echo json_encode($iamwho);
+/*function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
         sendMessage(array(
             "source" => $update["result"]["source"],
@@ -18,5 +25,5 @@ $update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);
 if (isset($update["result"]["action"])) {
     processMessage($update);
-}
+} */
 ?>
