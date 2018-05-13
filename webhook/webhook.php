@@ -12,9 +12,8 @@ function processMessage($update) {
       "type" => 4,
       "payload" => array(
           "line" => array(
-          "type" => "image",
-          "originalContentUrl" => "https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg",
-    "previewImageUrl" => "https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg"
+          "type" => "text",
+          "text" => $update
 ))
   )]
 )
