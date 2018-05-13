@@ -24,7 +24,8 @@ function processMessage($update) {
 }
 
 function sendMessage($parameters) {
-    echo json_encode($parameters);
+    $finale = json_decode($parameters);
+    echo json_encode($finale);
 }
 
 $update_response = file_get_contents("php://input");
