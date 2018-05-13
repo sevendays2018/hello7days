@@ -13,7 +13,7 @@ function processMessage($update) {
       "payload" => array(
           "line" => array(
           "type" => "text",
-          "text" => "TESTED"
+          "text" => json_encode($update)
 ))
   )]
 )
