@@ -2,11 +2,29 @@
 function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
         sendMessage(
-            {
+           /* {
                 "source":$update["result"]["source"],
                 "speech":"Hello",
                 "displayText":"HI"
-            }
+            }*/
+            
+            sendMessage(
+           array(
+ "speech" => "TESTED",
+  "messages" => array(
+    "type" => 4,
+      "platform" => "line",
+      "payload" => array(
+        "line" => array(
+          "type" => "image",
+          "originalContentUrl" => "https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg",
+    "previewImageUrl" => "https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg"
+    )
+  )
+  )
+)
+        );
+            
             /*array(
             "source" => $update["result"]["source"],
             "speech" => "{
