@@ -9,13 +9,15 @@ function processMessage($update) {
             }*/
             
            array(
- "speech" => "TESTED",
-  "line" => [ array(
-    
+ //"speech" => "TESTED",
+  "message" => [ array(
+      "type" => 4,
+      "payload" => array(
+          "line" => array(
           "type" => "image",
           "originalContentUrl" => "https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg",
     "previewImageUrl" => "https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg"
-
+))
   )]
 )
             
