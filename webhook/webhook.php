@@ -5,7 +5,7 @@
 // Recieve INPUT Data //
 function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
-        $userDataGET = json_encode($update);
+        $userDataGET = $update;
         $userDataGET = $userDataGET->userId;
         
         $url = 'https://api.line.me/v2/bot/profile/'.$userDataGET;
