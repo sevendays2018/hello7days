@@ -3,10 +3,10 @@
  * PROCESSANDO A MENSAGEM 
  * QUE CHEGA DO BOT
  */
-function processMessage($update) {
-    if($update["result"]["action"] == "buscar.nfe"){
+function processMessage(update) {
+    if(update["result"]["action"] == "buscar.nfe"){
         sendMessage(array(
-            "source" => $update["result"]["source"],
+            "source" => update["result"]["source"],
             "speech" => "..........TEXT HERE...........",
             "displayText" => ".........TEXT HERE...........",
             "contextOut" => array()
@@ -16,8 +16,8 @@ function processMessage($update) {
 /*
  * FUNÇÃO PARA ENVIAR A MENSAGEM
  */
-function sendMessage($parameters) {
-    echo json_encode($parameters);
+function sendMessage(parameters) {
+    echo json_encode(parameters);
 }
 
 /*
