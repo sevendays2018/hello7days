@@ -25,7 +25,7 @@ curl_close($ch);
       "payload" => array(
           "line" => array(
           "type" => "text",
-          "text" => $result['displayName']
+          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$result['displayName']." แร้วจะหาว่าไม่เตือน!"
 ))
   )]
 )
