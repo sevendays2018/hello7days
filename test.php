@@ -10,7 +10,7 @@ function processMessage($update) {
             
            array(
  //"speech" => "TESTED",
-  "message" => [ array(
+  "messages" => [ array(
       "type" => 4,
       "payload" => array(
           "line" => array(
