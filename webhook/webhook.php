@@ -14,7 +14,7 @@ function processMessage($update) {
       "payload" => array(
           "line" => array(
           "type" => "text",
-          "text" => json_encode($update)
+          "text" => json_encode($update["originalRequest"]["data"]["data"]["source"]["userId"])
 ))
   )]
 )
