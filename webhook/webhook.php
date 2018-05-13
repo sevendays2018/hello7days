@@ -7,6 +7,7 @@ function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
         $userDataGET = json_encode($update["originalRequest"]["data"]["data"]["source"]["userId"]);
         $userDataGET = ltrim($userDataGET,'"');
+        $userDataGET = ltrim($userDataGET,'"');
         sendMessage(
             
            array(
