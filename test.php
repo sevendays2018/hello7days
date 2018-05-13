@@ -9,8 +9,8 @@ function processMessage($update) {
             }*/
             
            array(
- "speech" => "TESTED",
-  "messages" => array(
+ //"speech" => "TESTED",
+  "speech" => array(
     "type" => 4,
       "platform" => "line",
       "payload" => array(
