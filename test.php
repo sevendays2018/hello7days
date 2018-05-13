@@ -22,10 +22,23 @@ function processMessage($update) {
         );
     }
 }
-
+sendMessage(
+           array(
+            "source" => $update["result"]["source"],
+            "speech" => "{
+  \"line\": {
+    \"type\": \"image\",
+    \"originalContentUrl\": \"https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg\",
+    \"previewImageUrl\": \"https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg\"
+  }
+}",
+            "displayText" => "HELLO",
+            "contextOut" => array()
+        )
+        );
 function sendMessage($parameters) {
-    $finale = json_decode($parameters);
-    echo json_encode($finale);
+    //$finale = json_decode($parameters);
+    echo json_encode($parameters);
 }
 
 $update_response = file_get_contents("php://input");
