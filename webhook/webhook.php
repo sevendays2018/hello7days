@@ -7,7 +7,7 @@ function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
         $userDataGET = json_encode($update);
         $userDataGET = substr(strstr($userDataGET,'userId'),9,-1);
-        $userDataGET = substr($userDataGET,0,strpos($userDataGET,'","type'));
+        $userDataGET = substr($userDataGET,0,strpos($userDataGET,'","type":"message"'));
         
         $url = 'https://api.line.me/v2/bot/profile/'.$userDataGET;
 $headers = array('Authorization: Bearer Lxqz2e+YBidafMeoIgAYTbcFEJtAaf0EJ9E715p1bU4d6UKk5M8dJ9lvkiMdagnmpkdt+uqdgDERWYJzh2XARz1wZStu4jCWotCDdJ4p1/9TORp6trSz7g1jsoNmB1kmGqdmWGLJ012QWauIs4NckQdB04t89/1O/w1cDnyilFU=');
@@ -27,7 +27,7 @@ $finale = json_decode($result, true);
       "payload" => array(
           "line" => array(
           "type" => "text",
-          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$userDataGET." แร้วจะหาว่าไม่เตือน!"
+          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$finale['displayName']." แร้วจะหาว่าไม่เตือน!"
 ))
   )]
 )
