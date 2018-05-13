@@ -3,13 +3,7 @@ function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
         sendMessage(array(
             "source" => $update["result"]["source"],
-            "speech" => "{
-  'line': {
-    'type': 'image',
-    'originalContentUrl': 'https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg',
-    'previewImageUrl': 'https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg'
-  }
-}",
+            "speech" => "https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg",
             "displayText" => "HELLO",
             "contextOut" => array()
         ));
