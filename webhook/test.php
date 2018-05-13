@@ -19,6 +19,24 @@ function sendMessage($parameters) {
 
 // ACTION and REPLY Process //
 /* CODE HERE */
+function processMessage($update) {
+    if($update["result"]["action"] == "sayHello"){
+        sendMessage(
+            
+           array(
+  "messages" => [ array(
+      "type" => 4,
+      "payload" => array(
+          "line" => array(
+          "type" => "text",
+          "text" => json_encode($update)
+))
+  )]
+)
+            
+        );
+    }
+}
 
 
 /* Developed by 7 Days Team, Trained by Club Everyday's Members */
