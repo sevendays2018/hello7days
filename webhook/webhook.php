@@ -7,6 +7,7 @@ function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
         sendMessage($update);
     }
+}
 function sendMessage($parameters) {
     //$finale = json_decode($parameters);
     echo json_encode($parameters);
