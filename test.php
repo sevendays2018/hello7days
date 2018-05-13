@@ -1,21 +1,17 @@
 <?php
 function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
-        sendMessage(array(
-           /* "source" => $update["result"]["source"],
-            "speech" => "Hello from webhook",
-            "displayText" => "Hello from webhook",
-            "contextOut" => array()*/
-             "source" => $update["result"]["source"],
-            "type" => "text",
-            "text" => "ดีจ้า",
-            "contextOut" => array()
-        ));
+       echo {
+  "line": {
+    "type": "text",
+    "text": "hello"
+  }
+};
     }
 }
 
 function sendMessage($parameters) {
-    echo json_encode($parameters);
+    echo $parameters;
 }
 
 $update_response = file_get_contents("php://input");
