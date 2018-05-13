@@ -5,12 +5,24 @@
 // Recieve INPUT Data //
 function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
-        sendMessage("source" => $update["result"]["source"],
-            "speech" => "TESTED",
-            "displayText" => "HELLO",
-            "contextOut" => array());
+        sendMessage(
+            
+           array(
+  "messages" => [ array(
+      "type" => 4,
+      "payload" => array(
+          "line" => array(
+          "type" => "image",
+          "originalContentUrl" => "https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg",
+    "previewImageUrl" => "https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg"
+))
+  )]
+)
+            
+        );
     }
 }
+
 function sendMessage($parameters) {
     //$finale = json_decode($parameters);
     echo json_encode($parameters);
@@ -20,6 +32,5 @@ $update = json_decode($update_response, true);
 if (isset($update["result"]["action"])) {
     processMessage($update);
 }
-
 /* Developed by 7 Days Team, Trained by Club Everyday's Members */
 ?>
