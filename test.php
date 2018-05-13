@@ -1,3 +1,4 @@
+<?php
 function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
         sendMessage(array(
@@ -18,3 +19,4 @@ $update = json_decode($update_response, true);
 if (isset($update["result"]["action"])) {
     processMessage($update);
 }
+?>
