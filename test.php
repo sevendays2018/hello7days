@@ -1,7 +1,13 @@
 <?php
 function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
-        sendMessage(array(
+        sendMessage(
+            {
+                "source":$update["result"]["source"],
+                "speech":"Hello",
+                "displayText":"HI"
+            }
+            /*array(
             "source" => $update["result"]["source"],
             "speech" => "{
   \"line\": {
@@ -12,7 +18,8 @@ function processMessage($update) {
 }",
             "displayText" => "HELLO",
             "contextOut" => array()
-        ));
+        )*/
+        );
     }
 }
 
