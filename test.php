@@ -5,7 +5,7 @@ function processMessage($update) {
             "source" => $update["result"]["source"],
             "speech" => "{
   'line': {
-    'type': "image",
+    'type': 'image',
     'originalContentUrl': 'https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg',
     'previewImageUrl': 'https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg'
   }
