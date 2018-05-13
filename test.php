@@ -8,7 +8,6 @@ function processMessage($update) {
                 "displayText":"HI"
             }*/
             
-            sendMessage(
            array(
  "speech" => "TESTED",
   "messages" => array(
@@ -23,7 +22,6 @@ function processMessage($update) {
   )
   )
 )
-        );
             
             /*array(
             "source" => $update["result"]["source"],
@@ -40,7 +38,7 @@ function processMessage($update) {
         );
     }
 }
-sendMessage(
+/*sendMessage(
            array(
             //"source" => $update["result"]["source"],
             "speech" => "{
@@ -53,16 +51,16 @@ sendMessage(
             "displayText" => "HELLO",
             "contextOut" => array()
         )
-        );
+        );*/
 function sendMessage($parameters) {
     //$finale = json_decode($parameters);
     echo json_encode($parameters);
 }
 
-/*$update_response = file_get_contents("php://input");
+$update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);
 if (isset($update["result"]["action"])) {
     processMessage($update);
-}*/
+}
 ?>
 
