@@ -13,7 +13,7 @@ function processMessage($update) {
 }
 
 function sendMessage($parameters) {
-    echo json_encode($parameters);
+    echo $parameters;
 }
 
 $update_response = file_get_contents("php://input");
