@@ -1,3 +1,3 @@
 <?php
-echo "Hello, IT's 7 Days BOT!";
+echo "Hello, It's 7 Days BOT!";
 ?>
