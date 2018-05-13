@@ -2,13 +2,7 @@
 sendMessage(
            array(
             //"source" => $update["result"]["source"],
-            "speech" => "{
-  \"line\": {
-    \"type\": \"image\",
-    \"originalContentUrl\": \"https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg\",
-    \"previewImageUrl\": \"https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg\"
-  }
-}",
+            "speech" => "test",
             "displayText" => "HELLO",
             "contextOut" => array()
         )
